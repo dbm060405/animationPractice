@@ -3,11 +3,11 @@ import {Reward} from '../reward';
 
 @Component({
   selector: 'app-reward-ticket',
-  templateUrl: './reward-ticket.component.html',
-  styleUrls: ['./reward-ticket.component.scss'],
+  templateUrl: './ticket.component.html',
+  styleUrls: ['./ticket.component.scss'],
   animations: []
 })
-export class RewardTicketComponent implements OnInit {
+export class TicketComponent implements OnInit {
   @Input() reward: Reward;
   @Input() available: boolean;
   @Input() disabled: boolean;
