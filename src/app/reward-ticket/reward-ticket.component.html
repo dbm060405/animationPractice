@@ -1,0 +1,12 @@
+<div *ngIf="reward">
+      <h5>{{reward.title || 'Reward Title'}}</h5>
+      <h6 style="font-size: 65%;">{{reward.description}}</h6>
+    <div>
+      <h6 *ngIf="available" style="font-size:65%">
+        Valid until {{reward.endDate | date: 'shortDate'}}
+      </h6>
+      <h6 *ngIf="!available" style="font-size:65%">
+        Valid {{reward.startDate | date: 'shortDate'}} through {{reward.endDate | date: 'shortDate'}}
+      </h6>
+    </div>
+</div>
