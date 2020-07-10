@@ -128,5 +128,8 @@
       }
     }
   },
-  "defaultProject": "angular-animation"
+  "defaultProject": "angular-animation",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,8 +1,10 @@
 <h1>{{title}}</h1>
-<div>
-  <button (click)="toggleList('available')"> Available </button>
-  <button (click)="toggleList('future')"> Future </button>
-  <div class="container" *ngIf="rewards?.length" [@sliding]="activeRewards">
+<div class="container-fluid">
+  <div class="">
+    <button (click)="toggleList('available')" class="mr-1"> Available </button>
+    <button (click)="toggleList('future')"> Future </button>
+  </div>
+  <div *ngIf="rewards?.length" [@sliding]="activeRewards">
     <div *ngFor="let reward of rewards">
       <app-reward-ticket [reward]="reward" [available]="activeRewards === 'available'"></app-reward-ticket>
     </div>
