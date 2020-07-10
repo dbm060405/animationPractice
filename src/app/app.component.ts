@@ -11,7 +11,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       //#region transitions query
       // TODO: working on the sliding
       transition('available => future', [
-        // query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
+        query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
         group([
           query(':leave', [
             style({transform: 'translateX(0)'}),
@@ -24,7 +24,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
         ])
       ]),
       transition('future => available', [
-        // query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
+        query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
         group([
           query(':leave', [
             style({transform: 'translateX(0)'}),
@@ -43,7 +43,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       //   transform: 'translateX(0)', opacity: 1
       // })),
       // transition('available => future', [
-      //   style({ width: 150, transform: 'translateX(100px)', opacity: 1 }),
+      //   style({ width: 150, transform: 'translateX(100px)'}),
       //   group([
       //     animate('0.3s 0.1s ease', style({
       //       transform: 'translateX(0)',
@@ -55,7 +55,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       //   ])
       // ]),
       // transition('future => available', [
-      //   style({ width: 150, transform: 'translateX(-100px)', opacity: 1 }),
+      //   style({ width: 150, transform: 'translateX(-100px)'}),
       //   group([
       //     animate('0.3s ease', style({
       //       transform: 'translateX(0px)',
