@@ -11,7 +11,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       //#region transitions query
       // TODO: working on the sliding
       transition('available => future', [
-        query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
+        query(':enter, :leave', style({position: 'relative'}), {optional: true}),
         group([
           query('.current', [
             style({transform: 'translateX(0)'}),
@@ -24,7 +24,7 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
         ])
       ]),
       transition('future => available', [
-        query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
+        query(':enter, :leave', style({position: 'relative'}), {optional: true}),
         group([
           query('.future', [
             style({transform: 'translateX(0)'}),
