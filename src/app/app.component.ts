@@ -13,11 +13,11 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       transition('available => future', [
         query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
         group([
-          query(':leave', [
+          query('.current', [
             style({transform: 'translateX(0)'}),
             animate('2s', style({transform: 'translateX(-200px)'}))], {optional: true}
           ),
-          query(':enter', [
+          query('.future', [
             style({transform: 'translateX(200px)'}),
             animate('2s', style({transform: 'translateX(0)'}))], {optional: true}
           ),
@@ -26,11 +26,11 @@ import {animate, group, query, state, style, transition, trigger} from '@angular
       transition('future => available', [
         query(':enter, :leave', style({position: 'fixed'}), {optional: true}),
         group([
-          query(':leave', [
+          query('.future', [
             style({transform: 'translateX(0)'}),
             animate('2s', style({transform: 'translateX(200px)'}))], {optional: true}
           ),
-          query(':enter', [
+          query('.current', [
             style({transform: 'translateX(-200px)'}),
             animate('2s', style({transform: 'translateX(0)'}))], {optional: true}
           ),
